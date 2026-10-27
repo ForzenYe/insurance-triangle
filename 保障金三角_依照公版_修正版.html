@@ -117,12 +117,15 @@ body.hide-notes .teaching-notes{display:none}
 <div class="teaching-note" style="left:1134px;top:544px;font-size:16px">病房費<br>醫療雜費<br>手術材料費<br>醫療耗材<br>藥品費<br>檢驗費<br>X光、超音波、CT、MRI<br>注射及治療費<br>處置費</div>
 </div><div class="note">本表供客戶保障整理使用，保障名稱與金額請依保險契約內容填寫；實際理賠仍以各保單條款為準。</div></main></div></div><div class="help">建議使用 <b>A4 橫式</b> 列印。手機若不能直接預覽 HTML，可改以 Safari 或 Chrome 開啟。</div><script>
 const STORE='protection_triangle_reference_v6';let state={};
-try{state=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+try{
+  const saved=JSON.parse(localStorage.getItem(STORE)||'{}');
+  if(saved!==null&&typeof saved==='object'&&!Array.isArray(saved))state=saved;
+}catch(e){}
 for(const input of document.querySelectorAll('input[data-key]')){
   const k=input.getAttribute('data-key');if(Object.prototype.hasOwnProperty.call(state,k))input.value=state[k];
   input.addEventListener('input',()=>{state[k]=input.value;try{localStorage.setItem(STORE,JSON.stringify(state))}catch(e){}});
 }
 function setScale(){const container=document.querySelector('.viewport');const stage=document.querySelector('.stage');const page=document.querySelector('.page');let width=Math.min(1428,Math.max(300,container.clientWidth-20));const s=width/1400;stage.style.width=width+'px';stage.style.height=(925*s)+'px';page.style.transform=`scale(${s})`;}
 window.addEventListener('resize',setScale);setScale();
-document.getElementById('clear').addEventListener('click',()=>{if(confirm('要清除這張客戶保障表的所有輸入資料嗎？')){document.querySelectorAll('input[data-key]').forEach(e=>e.value='');state={};localStorage.removeItem(STORE)}});
+document.getElementById('clear').addEventListener('click',()=>{if(confirm('要清除這張客戶保障表的所有輸入資料嗎？')){document.querySelectorAll('input[data-key]').forEach(e=>e.value='');state={};try{localStorage.removeItem(STORE)}catch(e){}}});
 </script></body></html>
