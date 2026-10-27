@@ -1,0 +1,128 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>保障金三角｜依公版重建｜可編輯列印</title><style>
+:root{color-scheme:light}*{box-sizing:border-box}body{margin:0;background:#e8f2ec;font-family:Arial,"PingFang TC","Microsoft JhengHei","Noto Sans TC",sans-serif;color:#233a30}
+.toolbar{background:#127449;color:#fff;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;padding:12px 15px;box-shadow:0 2px 7px #0001}
+.toolbar strong{font-size:18px}.toolbar small{color:#e5f5ea}.toolbar button{background:white;border:0;border-radius:7px;padding:10px 15px;font-size:14px;font-weight:800;color:#136a47;cursor:pointer}.toolbar button:hover{background:#e7fff0}
+.viewport{width:100%;overflow:auto;padding:18px 0 10px}.stage{position:relative;margin:0 auto;overflow:hidden}.page{width:1400px;height:925px;position:absolute;left:0;top:0;transform-origin:0 0;overflow:hidden;background:white;box-shadow:0 0 0 1px #dde4dd}
+.underlay{position:absolute;left:0;top:0;width:1400px;height:925px;pointer-events:none}.headline{position:absolute;left:595px;top:25px;font-size:29px;font-weight:900;color:#1f6245;letter-spacing:2px}.client{position:absolute;left:375px;top:83px;display:flex;align-items:center;gap:12px;font-size:20px;font-weight:750}.client input{border:0;border-bottom:1px solid #94a49b;background:transparent;width:224px;font-size:20px;font-weight:700;color:#253c2b;padding:6px 8px;outline:none}
+.field{position:absolute;text-align:center}.field-label{font-size:25px;font-weight:900;color:#258458;white-space:nowrap;letter-spacing:.2px}.amount{display:flex;justify-content:center;align-items:center;gap:7px;margin-top:6px;border-bottom:1px solid #adbdb1;padding:0 2px 5px}.amount input{min-width:0;width:100%;text-align:center;font-size:26px;font-weight:900;background:transparent;border:0;outline:0;color:#202923;padding:2px 0}.amount span{white-space:nowrap;font-size:16px;color:#3b5041}
+.field:focus-within .amount{border-bottom:2px solid #1c8251}input:focus{background:#fff9d7!important;border-radius:3px}input::placeholder{color:#9aa6a0;font-weight:500}
+.life-title{position:absolute;left:1158px;top:164px;width:150px;text-align:center;font-size:27px;font-weight:900;color:#29825a}.life-amount{position:absolute;left:1140px;top:204px;width:178px;display:flex;align-items:center;gap:5px;border-bottom:1px solid #aebbb0}.life-amount input{width:135px;min-width:0;border:0;outline:none;text-align:center;background:transparent;font-size:24px;font-weight:900}.life-amount span{white-space:nowrap;font-size:14px}
+.mini{position:absolute;display:flex;align-items:center;gap:6px;font-size:16px;height:28px}.mini b{font-size:16px;white-space:nowrap;width:57px;color:#4c6254}.mini input{border:0;border-bottom:1px solid #b5c2ba;outline:none;min-width:0;width:100%;background:transparent;font-size:19px;font-weight:800;text-align:center}.mini span{font-size:13px;white-space:nowrap}
+.mini-care{position:absolute;top:152px;left:335px;width:198px;font-size:15px}.mini-care div{display:flex;justify-content:space-between;border-bottom:1px solid #d3ded7;padding:4px 0}.mini-care span{font-weight:700}.mini-care b{font-size:13px;color:#76817a;font-weight:500}
+.seven{position:absolute;left:36px;top:331px;width:243px;color:#304538}.seven-h{font-size:19px;font-weight:900;margin-bottom:6px}.seven ol{padding-left:21px;margin:0;font-size:14px;line-height:1.65;font-weight:620}.seven li{white-space:nowrap;letter-spacing:-.4px}
+.reimb-title{position:absolute;left:1046px;top:502px;width:190px;text-align:center;font-size:28px;font-weight:900;color:#258458}.reimb-row{position:absolute;left:972px;width:336px;display:flex;align-items:center;gap:14px;font-size:21px}.reimb-row label{font-weight:800;color:#1e7e54;width:55px;flex-shrink:0}.reimb-row input{width:200px;min-width:0;outline:none;border:0;border-bottom:1px solid #abb9ae;background:transparent;font-size:25px;font-weight:800;text-align:center}.reimb-row span{font-size:15px;white-space:nowrap}.reimb-divider{position:absolute;left:968px;top:648px;width:345px;height:1px;background:#d4ded5}
+.lt-card{position:absolute;height:99px;border:1.7px solid #a1b2a6;border-radius:9px;background:#ffffffd9;padding:5px 9px}.lt-head{font-size:17px;text-align:center;font-weight:850;color:#277950;height:23px}.lt-row{height:30px;display:flex;align-items:center;gap:5px;border-top:1px solid #e2e9e3}.lt-row label{width:46px;flex-shrink:0;font-size:14px;font-weight:700;color:#45584d}.lt-row input{min-width:0;width:100%;background:transparent;border:0;border-bottom:1px solid #e0e7e1;outline:none;text-align:center;font-size:17px;font-weight:850}.lt-row span{font-size:12px;color:#607063}
+.note{position:absolute;bottom:10px;left:40px;right:40px;text-align:center;font-size:12px;color:#61776a}.help{text-align:center;font-size:13px;color:#566e5d;padding:6px 10px 24px}.help b{color:#135c3d}
+@page{size:A4 landscape;margin:5mm}
+@media print{html,body{margin:0!important;padding:0!important;width:1040px!important;background:white!important}.toolbar,.help{display:none!important}.viewport{width:1040px!important;overflow:hidden!important;padding:0!important}.stage{width:1040px!important;height:688px!important;margin:0!important;overflow:hidden!important}.page{transform:scale(.743)!important;transform-origin:0 0!important;box-shadow:none!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}input::placeholder{color:transparent!important}input{color:#18261f!important} }
+
+/* Keep entered values black across preview, browser, and print. */
+input[data-key]{color:#000!important;-webkit-text-fill-color:#000!important;opacity:1}
+input[data-key]::placeholder{color:#9aa6a0!important;-webkit-text-fill-color:#9aa6a0!important}
+@media print{input[data-key]::placeholder{color:transparent!important;-webkit-text-fill-color:transparent!important}}
+
+.teaching-notes{position:absolute;inset:0;pointer-events:none;z-index:3}
+.teaching-note{position:absolute;font-size:17px;line-height:1.22;font-weight:800;padding:3px 6px;border-radius:6px;color:#c62d40;background:#ffd4dbe0;white-space:nowrap}
+.teaching-note.blue{color:#237eaa;background:#d7effbe8}
+.teaching-notes svg{position:absolute;inset:0;width:1400px;height:925px;overflow:visible}
+body.hide-notes .teaching-notes{display:none}
+
+.illness-cluster{position:absolute;left:18px;top:8px;width:345px;height:244px;pointer-events:none;z-index:4}
+.illness-cluster .major-bubble{position:absolute;left:0;top:0;width:306px;height:205px;border-radius:44% 48% 46% 24%;background:#192c48f2;color:#fff;padding:64px 14px 12px}
+.illness-cluster .specific-bubble{position:absolute;left:128px;top:93px;width:216px;height:145px;border-radius:50%;background:#44377bbd;color:#fff;padding:39px 17px 12px}
+.illness-cluster .cancer-bubble{position:absolute;left:111px;top:-8px;width:171px;height:78px;border-radius:0 0 50% 50%;background:#e60020;display:flex;justify-content:center;align-items:center}
+.illness-cluster .cancer-bubble b{display:flex;align-items:center;justify-content:center;background:#ffdf00;color:#171717;font-size:24px;width:80px;height:59px;border-radius:50%}
+.illness-cluster strong{display:block;font-size:20px;line-height:1.2;letter-spacing:1px}
+.illness-cluster small{display:block;font-size:12px;line-height:1.35;font-weight:700;letter-spacing:.4px}
+
+.mini-care div{height:29px;display:flex;align-items:center;gap:4px;padding:2px 0}
+.mini-care label{width:49px;flex-shrink:0;font-size:15px;font-weight:700}
+.mini-care input{width:92px;min-width:0;flex:1;border:0;border-bottom:1px solid #aebbb0;background:transparent;text-align:center;font-size:18px;font-weight:800;outline:none}
+.mini-care .care-unit{font-size:13px;white-space:nowrap;font-weight:500}
+.illness-summary{position:absolute;left:45px;top:247px;width:242px;height:89px;border:1.7px solid #a1b2a6;border-radius:7px;background:#fff;padding:3px 9px;z-index:2}
+.illness-summary .summary-row{height:27px;display:flex;align-items:center;gap:4px;border-bottom:1px solid #d4ded5}
+.illness-summary .summary-row:last-child{border-bottom:0}
+.illness-summary label{width:88px;flex-shrink:0;font-size:16px;font-weight:800;white-space:nowrap}
+.illness-summary input{width:100%;min-width:0;text-align:center;border:0;background:transparent;font-size:20px;font-weight:900;outline:none}
+.illness-summary span{font-size:14px;white-space:nowrap}
+.seven{top:351px}
+
+/* Red text emphasis stays within the original left-hand text area. */
+.seven{left:36px;top:345px;width:243px;padding:0;border:0;border-radius:0;background:transparent;color:#c62d40}
+.seven-h{color:inherit;margin-bottom:5px}
+.seven ol{font-size:13px;line-height:1.65;padding-left:19px;color:inherit}
+</style></head><body>
+<header class="toolbar"><strong>保障金三角</strong><small>直接點選金額輸入｜每格皆可修改｜自動儲存</small><button type="button" onclick="window.print()">列印／儲存 PDF</button><button type="button" onclick="document.body.classList.toggle('hide-notes')">顯示／隱藏講解註解</button><button type="button" id="clear">清除資料</button></header>
+<div class="viewport"><div class="stage"><main class="page"><svg class="underlay" viewBox="0 0 1400 925" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+<defs><linearGradient id="wash" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4f8e9"/><stop offset=".28" stop-color="#fff"/><stop offset=".75" stop-color="#fff"/><stop offset="1" stop-color="#ddf5e7"/></linearGradient></defs>
+<rect width="1400" height="925" fill="url(#wash)"/>
+<path d="M0 0 H270 Q218 128 0 234Z" fill="#d5f1df" opacity=".72"/>
+<path d="M1400 925 H990 Q1260 790 1400 568Z" fill="#d4f1df" opacity=".72"/>
+<g fill="white" fill-opacity=".70" stroke="#94a49b" stroke-width="2" stroke-linejoin="round">
+<!-- independent upper triangle -->
+<path d="M691 131 Q700 125 708 131 L918 291 Q930 305 911 305 H486 Q467 305 478 291 Z"/>
+<!-- independent middle trapezoid -->
+<path d="M446 347 Q458 339 476 339 H922 Q940 339 955 348 L1113 450 Q1127 463 1107 463 H279 Q259 463 274 450 Z"/>
+<!-- bottom left sloping top with square shared inset no overflow -->
+<path d="M83 588 Q77 598 87 608 Q90 610 99 610 H463 Q478 610 478 596 V505 Q478 487 459 486 H249 Q238 486 229 493 Z"/>
+<!-- upper center: single box, two adjacent surgery headings inside -->
+<rect x="495" y="486" width="421" height="124" rx="12"/>
+<!-- right side one continuous trapezoid shared as in source -->
+<path d="M944 486 H1139 Q1150 486 1160 492 L1340 608 Q1350 615 1350 628 V746 Q1350 760 1336 760 H944 Q930 760 930 746 V499 Q930 486 944 486 Z"/>
+<!-- lower left and center rectangles -->
+<rect x="80" y="625" width="398" height="135" rx="8"/>
+<rect x="495" y="625" width="421" height="135" rx="8"/>
+<!-- independent life outside -->
+<rect x="1114" y="150" width="233" height="194" rx="9"/>
+<!-- top left long-care summary small box -->
+<rect x="322" y="145" width="226" height="95" rx="8"/>
+</g>
+<line x1="705" y1="499" x2="705" y2="594" stroke="#d8e0db" stroke-width="1.4"/>
+<line x1="1117" y1="235" x2="1342" y2="235" stroke="#b4c0b8" stroke-width="1.2"/>
+<line x1="1136" y1="286" x2="1327" y2="286" stroke="#dce5dc" stroke-width="1"/>
+<line x1="958" y1="659" x2="1320" y2="659" stroke="#d3ded4" stroke-width="1"/>
+<path d="M540 240 L553 284" stroke="#9daaa2" stroke-width="1.5" fill="none"/>
+<circle cx="553" cy="284" r="3" fill="#94a49b"/>
+</svg><div class="headline">保障金三角</div><div class="client"><label for="client">客戶</label><input id="client" data-key="client" placeholder="請輸入姓名"></div><div class="mini-care"><div><label for="care_summary">長照</label><input id="care_summary" data-key="care_summary" type="text" inputmode="decimal" placeholder="0" aria-label="長照每月金額"><span class="care-unit">元/月</span></div><div><label for="disability_summary">失能</label><input id="disability_summary" data-key="disability_summary" type="text" inputmode="decimal" placeholder="0" aria-label="失能每月金額"><span class="care-unit">元/月</span></div><div><label for="similar_care_summary">類長照</label><input id="similar_care_summary" data-key="similar_care_summary" type="text" inputmode="decimal" placeholder="0" aria-label="類長照每月金額"><span class="care-unit">元/月</span></div></div><div class="illness-summary" aria-label="重大疾病與特定傷病金額"><div class="summary-row"><label for="summary_critical">重大疾病</label><input id="summary_critical" data-key="summary_critical" type="text" inputmode="decimal" placeholder="0" aria-label="重大疾病金額"><span>萬元</span></div><div class="summary-row"><label for="summary_specific_illness">特定傷病</label><input id="summary_specific_illness" data-key="summary_specific_illness" type="text" inputmode="decimal" placeholder="0" aria-label="特定傷病金額"><span>萬元</span></div><div class="summary-row"><label for="summary_certificate">見卡理賠</label><input id="summary_certificate" data-key="summary_certificate" type="text" inputmode="decimal" placeholder="0" aria-label="見卡理賠金額"><span>萬元</span></div></div><div class="seven"><div class="seven-h">7項重大疾病</div><ol><li>重大器官移植或造血幹細胞移植</li><li>冠狀動脈繞道手術</li><li>末期腎病變</li><li>腦中風後障礙</li><li>急性心肌梗塞</li><li>癱瘓</li><li>癌症</li></ol></div><div class="field " style="left:582px;top:202px;width:240px">
+ <div class="field-label">（失能）長照</div><div class="amount"><input data-key="care" type="text" inputmode="decimal" placeholder="0" aria-label="（失能）長照"><span>元/月</span></div></div><div class="field " style="left:407px;top:390px;width:210px">
+ <div class="field-label">重大疾病</div><div class="amount"><input data-key="critical" type="text" inputmode="decimal" placeholder="0" aria-label="重大疾病"><span>萬元</span></div></div><div class="field " style="left:716px;top:390px;width:210px">
+ <div class="field-label">癌症</div><div class="amount"><input data-key="cancer" type="text" inputmode="decimal" placeholder="0" aria-label="癌症"><span>萬元</span></div></div><div class="field " style="left:171px;top:510px;width:274px">
+ <div class="field-label">疾病住院</div><div class="amount"><input data-key="sickstay" type="text" inputmode="decimal" placeholder="0" aria-label="疾病住院"><span>元/日</span></div></div><div class="field " style="left:166px;top:637px;width:275px">
+ <div class="field-label">意外住院</div><div class="amount"><input data-key="accstay" type="text" inputmode="decimal" placeholder="0" aria-label="意外住院"><span>元/日</span></div></div><div class="field " style="left:506px;top:509px;width:196px">
+ <div class="field-label">住院手術</div><div class="amount"><input data-key="hospital_surgery" type="text" inputmode="decimal" placeholder="0" aria-label="住院手術"><span>元/次</span></div></div><div class="field " style="left:707px;top:509px;width:196px">
+ <div class="field-label">門診手術</div><div class="amount"><input data-key="outpatient_surgery" type="text" inputmode="decimal" placeholder="0" aria-label="門診手術"><span>元/次</span></div></div><div class="field " style="left:566px;top:644px;width:277px">
+ <div class="field-label">特定處置</div><div class="amount"><input data-key="specific" type="text" inputmode="decimal" placeholder="0" aria-label="特定處置"><span>元/次</span></div></div><div class="reimb-title">實支</div>
+<div class="reimb-row" style="top:574px"><label>醫療</label><input data-key="med_reimb" placeholder="0" inputmode="decimal" aria-label="醫療實支"><span>萬元</span></div>
+<div class="reimb-divider"></div>
+<div class="reimb-row" style="top:681px"><label>意外</label><input data-key="acc_reimb" placeholder="0" inputmode="decimal" aria-label="意外實支"><span>萬元</span></div><div class="life-title">壽險</div><div class="life-amount"><input data-key="life" aria-label="壽險總額" placeholder="0"><span>萬元</span></div><div class="mini" style="left:1133px;top:251px;width:195px"><b>傳統型</b><input data-key="traditional" type="text" placeholder="0" aria-label="傳統型"><span>萬元</span></div><div class="mini" style="left:1133px;top:291px;width:195px"><b>投資型</b><input data-key="investment" type="text" placeholder="0" aria-label="投資型"><span>萬元</span></div><div class="lt-card" style="left:38px;top:793px;width:247px"><div class="lt-head">疾病住院</div><div class="lt-row"><label>終身</label><input data-key="ill_whole" type="text" placeholder="0" aria-label="疾病住院終身"><span>元</span></div><div class="lt-row"><label>非終身</label><input data-key="ill_term" type="text" placeholder="0" aria-label="疾病住院非終身"><span>元</span></div></div><div class="lt-card" style="left:307px;top:793px;width:247px"><div class="lt-head">住院手術</div><div class="lt-row"><label>終身</label><input data-key="hosp_whole" type="text" placeholder="0" aria-label="住院手術終身"><span>元</span></div><div class="lt-row"><label>非終身</label><input data-key="hosp_term" type="text" placeholder="0" aria-label="住院手術非終身"><span>元</span></div></div><div class="lt-card" style="left:576px;top:793px;width:247px"><div class="lt-head">門診手術</div><div class="lt-row"><label>終身</label><input data-key="out_whole" type="text" placeholder="0" aria-label="門診手術終身"><span>元</span></div><div class="lt-row"><label>非終身</label><input data-key="out_term" type="text" placeholder="0" aria-label="門診手術非終身"><span>元</span></div></div><div class="lt-card" style="left:845px;top:793px;width:247px"><div class="lt-head">特定處置</div><div class="lt-row"><label>終身</label><input data-key="specific_whole" type="text" placeholder="0" aria-label="特定處置終身"><span>元</span></div><div class="lt-row"><label>非終身</label><input data-key="specific_term" type="text" placeholder="0" aria-label="特定處置非終身"><span>元</span></div></div><div class="lt-card" style="left:1114px;top:793px;width:247px"><div class="lt-head">醫療實支</div><div class="lt-row"><label>終身</label><input data-key="med_whole" type="text" placeholder="0" aria-label="醫療實支終身"><span>元</span></div><div class="lt-row"><label>非終身</label><input data-key="med_term" type="text" placeholder="0" aria-label="醫療實支非終身"><span>元</span></div></div><div class="teaching-notes" aria-label="講解註解"><div class="illness-cluster" aria-label="癌症、重大傷病與特定傷病說明"><div class="major-bubble"><strong>重大傷病保險金</strong><small>健保重大傷病證明中的<br>22大項300多小項</small></div><div class="specific-bubble"><strong>特定傷病保險金</strong><small>常見嚴重傷病至22項<br>（視商品不同）</small></div><div class="cancer-bubble"><b>癌症</b></div></div>
+<svg viewBox="0 0 1400 925" aria-hidden="true"><defs><marker id="note-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10" fill="#c62d40"/></marker></defs>
+
+<path d="M1035 536 L1102 536" fill="none" stroke="#c62d40" stroke-width="3" marker-end="url(#note-arrow)"/>
+<path d="M910 530 Q936 542 906 581" fill="none" stroke="#c62d40" stroke-width="3" marker-end="url(#note-arrow)"/>
+<path d="M609 718 Q614 747 651 747" fill="none" stroke="#c62d40" stroke-width="3" marker-end="url(#note-arrow)"/>
+</svg>
+<div class="teaching-note" style="left:800px;top:145px">外傭：30,000元/月<br>台傭：43,000–60,000元/月</div>
+<div class="teaching-note" style="left:322px;top:280px;font-size:16px">重大傷病：22大項、300多小項<br>依照健保認列，範圍會隨之增減</div>
+<div class="teaching-note" style="left:644px;top:312px;font-size:14px">癌症治療：4.5萬元/月</div>
+<div class="teaching-note" style="left:807px;top:365px">一次金</div>
+<div class="teaching-note" style="left:598px;top:455px;font-size:15px">重疾＋癌症建議：200萬元</div>
+<div class="teaching-note blue" style="left:520px;top:481px;font-size:15px">有住院才有手術</div>
+<div class="teaching-note blue" style="left:736px;top:481px;font-size:15px">未住院才有手術</div>
+<div class="teaching-note blue" style="left:282px;top:583px;font-size:16px">單人病房：3800–5000元/日<br>雙人病房：1900–4300元/日<br>尊榮病房：12000元/日</div>
+<div class="teaching-note" style="left:763px;top:581px;font-size:15px">白內障手術<br>子宮肌瘤切除手術</div>
+<div class="teaching-note blue" style="left:823px;top:628px;font-size:16px">屬侵入性／特殊性醫療處置</div>
+<div class="teaching-note" style="left:636px;top:728px;font-size:15px">大腸鏡息肉切除術<br>心臟支架<br>尿路結石體外震波碎石術</div>
+<div class="teaching-note blue" style="left:960px;top:511px;font-size:16px">疾病、意外、癌症</div>
+
+<div class="teaching-note" style="left:1134px;top:544px;font-size:16px">病房費<br>醫療雜費<br>手術材料費<br>醫療耗材<br>藥品費<br>檢驗費<br>X光、超音波、CT、MRI<br>注射及治療費<br>處置費</div>
+</div><div class="note">本表供客戶保障整理使用，保障名稱與金額請依保險契約內容填寫；實際理賠仍以各保單條款為準。</div></main></div></div><div class="help">建議使用 <b>A4 橫式</b> 列印。手機若不能直接預覽 HTML，可改以 Safari 或 Chrome 開啟。</div><script>
+const STORE='protection_triangle_reference_v6';let state={};
+try{state=JSON.parse(localStorage.getItem(STORE)||'{}')}catch(e){}
+for(const input of document.querySelectorAll('input[data-key]')){
+  const k=input.getAttribute('data-key');if(Object.prototype.hasOwnProperty.call(state,k))input.value=state[k];
+  input.addEventListener('input',()=>{state[k]=input.value;try{localStorage.setItem(STORE,JSON.stringify(state))}catch(e){}});
+}
+function setScale(){const container=document.querySelector('.viewport');const stage=document.querySelector('.stage');const page=document.querySelector('.page');let width=Math.min(1428,Math.max(300,container.clientWidth-20));const s=width/1400;stage.style.width=width+'px';stage.style.height=(925*s)+'px';page.style.transform=`scale(${s})`;}
+window.addEventListener('resize',setScale);setScale();
+document.getElementById('clear').addEventListener('click',()=>{if(confirm('要清除這張客戶保障表的所有輸入資料嗎？')){document.querySelectorAll('input[data-key]').forEach(e=>e.value='');state={};localStorage.removeItem(STORE)}});
+</script></body></html>
